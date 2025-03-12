@@ -4,8 +4,11 @@ const http = require("http");
 const createSocketServer = require("./socket"); // our socket.js file
 
 const app = express();
+const cors = require("cors");
 
 // Optional: A simple route to confirm the server is live
+app.use(cors());
+
 app.get("/", (req, res) => {
   res.send("Socket.io server is running");
 });
