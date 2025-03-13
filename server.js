@@ -8,6 +8,7 @@ app.use(cors());
 
 // Optional: A simple route to confirm the server is live
 app.get("/", (req, res) => {
+    console.log("Socket.io server is running");
   res.send("Socket.io server is running");
 });
 
